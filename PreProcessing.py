@@ -1,5 +1,3 @@
-
-
 import pandas as pd
 
 
@@ -30,24 +28,8 @@ df.label.value_counts()
 
 df1 = pd.DataFrame()
 df1['label'] = df['label']
-df1['data'] = df['data']
-
-import re
-
-# Define a function to clean the data column using regular expressions
-def clean_image_data(entry):
-    if isinstance(entry, str):
-        entry = re.sub(r"\{'image': '", "", entry)
-        entry = re.sub(r"'}", "", entry)
-    return entry
-
-# Apply the custom function to the 'data' column
-df1['data'] = df1['data'].apply(clean_image_data)
-
-
-#if df1['data'].dtype != 'object':
-    #df1['data'] = df1['data'].astype(str)
-
-#df['data'] = df['data'].str.replace(r"{'image': ", "", regex=True)
-#df['data'] = df['data'].str.replace(r"}'", "", regex=True)                              
+#df1['data'] = df['data']
+df1['data'] = df['data'].astype(str).str.split('study', n=1).str[-1].apply(lambda x: 'study' + x[:-2])
 print(df1)
+
+
