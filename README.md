@@ -1,4 +1,4 @@
-This repository is for a classifier that I created as part of my master thesis. 
+This repository consists of a classifier that I created as part of my master thesis. 
 The classifier aims to identify artefacts from EEG recordings
 
 Preprocessing.py was used to lable the images and sort them into folders for the classifier
