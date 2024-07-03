@@ -24,4 +24,4 @@ Model able to classify 2 classes (Brain Activity, Artefacts (see above) https://
 Intended input format of the picture: https://neuraldatascience.io/_images/6ea52e7cc36a10990a9c59b6f4437693dd76ea733502a146ef0bc6d036098677.png
 
 ## How to Use 
-Open Load_Model and set the directories accordingly.
+Open Load_Model.py and set the directories accordingly.
